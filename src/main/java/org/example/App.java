@@ -10,16 +10,15 @@ public class App
     public static void main( String[] args )
     {
         Alien alien = new Alien();
-        alien.setAid(101);
-        alien.setName("jaadu");
-        alien.setColor("blue");
         Configuration cfg = new Configuration().configure();
         SessionFactory sf = cfg.buildSessionFactory();
         Session session = sf.openSession();
         Transaction tx = session.beginTransaction();
-        session.save(alien);
+        alien= (Alien) session.get(Alien.class, 100);
         tx.commit();
+        System.out.println(alien);
         session.close();
+
 
 
 
