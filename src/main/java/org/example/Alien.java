@@ -1,7 +1,8 @@
 package org.example;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 public class Alien {
@@ -10,6 +11,7 @@ public class Alien {
     private String name;
     private String color;
 
+    // Getters and Setters
     public int getAid() {
         return aid;
     }
@@ -32,5 +34,9 @@ public class Alien {
 
     public void setColor(String color) {
         this.color = color;
+    }
+    @Override
+    public String toString() {
+        return("Alien: " + aid + " " + name + " " + color);
     }
 }
