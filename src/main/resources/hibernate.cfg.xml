@@ -13,10 +13,12 @@
 
 
         <!-- Hibernate Dialect -->
-        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+<!--        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>-->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
 
         <!-- Automatically update database schema -->
-        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.hbm2ddl.auto">create</property>
 
         <!-- Show SQL Queries in Console -->
         <property name="hibernate.show_sql">true</property>

@@ -3,12 +3,16 @@ package org.example;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Embedded;
 
 @Entity
 public class Alien {
     @Id
     private int aid;
-    private String name;
+
+    @Embedded
+    private AlienName name;
+
     private String color;
 
     // Getters and Setters
@@ -20,11 +24,11 @@ public class Alien {
         this.aid = aid;
     }
 
-    public String getName() {
+    public AlienName getName() {  // Correct return type
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(AlienName name) {  // Correct parameter type
         this.name = name;
     }
 
@@ -35,8 +39,9 @@ public class Alien {
     public void setColor(String color) {
         this.color = color;
     }
+
     @Override
     public String toString() {
-        return("Alien: " + aid + " " + name + " " + color);
+        return "Alien: " + aid + " " + name.getFname() + " " + name.getMname() + " " + name.getLname() + " " + color;
     }
 }
