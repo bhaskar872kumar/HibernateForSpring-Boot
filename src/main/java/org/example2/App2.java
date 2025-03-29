@@ -8,7 +8,7 @@ public class App2 {
     public static void main(String[] args) {
         Laptop laptop = new Laptop();
         laptop.setId(98);
-        laptop.setName("dell");
+        laptop.setName("hp");
 
         Student student = new Student();
         student.setMarks(34);

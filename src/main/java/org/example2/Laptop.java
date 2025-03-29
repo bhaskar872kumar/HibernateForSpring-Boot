@@ -10,6 +10,8 @@ public class Laptop {
     @Column(nullable = false)
     private int id;
     private String name;
+    @ManyToOne
+    private Student student;
 
     public int getId() {
         return id;
