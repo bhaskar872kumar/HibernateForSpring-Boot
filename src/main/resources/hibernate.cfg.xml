@@ -25,5 +25,10 @@
 
         <!-- Mapping Files (if any) -->
         <mapping class="org.example.Alien"/>
+        <mapping class="org.example2.Student"/>
+        <mapping class="org.example2.Laptop"/>
+
+
+
     </session-factory>
 </hibernate-configuration>
